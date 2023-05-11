@@ -1,0 +1,33 @@
+<!-- <p>server works!</p>
+
+<h2>Sakshi with ID <span>{{appId}}</span> is <span class="text-danger">{{appStatus}}</span></h2>
+<p>{{ getserver() }}</p>
+<hr> -->
+
+
+<!-- <p>{{allowNewServer}}</p> -->
+     <!-- alternate -->
+<!-- <p [innerText]="allowNewServer"></p> -->
+<label>Server Check</label>
+<input type="text"
+    class="form-control"
+    [(ngModel)]="serverName">
+
+<!-- <p>{{serverName}}</p> -->
+
+<button 
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()" >
+    Add Server</button>
+
+<!-- <p>{{serverCreationStatus}}</p> -->
+
+<p *ngIf="serverCreated">Server was created, server name is  {{serverName}}</p>
+<!-- <app-servers></app-servers> -->
+
+<!-- <ng-template #noServer> No Server was created !</ng-template> -->
+
+
+
+
